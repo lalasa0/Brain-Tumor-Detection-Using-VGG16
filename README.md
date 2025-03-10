@@ -44,5 +44,3 @@ The VGG-16 model effectively classifies brain tumor images. Future improvements 
 - Exploring **alternative CNN architectures** like ResNet or EfficientNet
 
 ---
-
-📌 **License:** This project is open-source under the MIT License.
