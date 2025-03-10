@@ -1,28 +1,48 @@
-Brain Tumor Detection Using VGG-16 CNN Transfer Learning
-Project Overview
-This project applies Deep Learning and Computer Vision to detect brain tumors from MRI scans. A Convolutional Neural Network (CNN) based on the VGG-16 architecture is trained to classify MRI scans into two categories:
-✅ No Tumor | ❌ Brain Tumor
+# Brain Tumor Detection Using VGG16
 
-Dataset & Preprocessing
-Before training, the MRI scans undergo data preprocessing, including image cropping and augmentation to enhance model performance.
+## Overview
+This project focuses on detecting brain tumors from MRI scans using deep learning techniques. We employ a **Convolutional Neural Network (CNN)**, specifically leveraging the **VGG-16 model**, to classify MRI images into **tumor** and **non-tumor** categories.
 
-<p align="center"> <img width="750" height="200" src="Images/Data%20Preprocessing.png" alt="Data Preprocessing"> </p>
-Model Architecture
-The model is built using VGG-16 with transfer learning, leveraging pre-trained weights for feature extraction. The final layers are fine-tuned for binary classification. The Jupyter Notebook (Brain-Tumor-Detection-MRI-Scans.ipynb) contains the full implementation.
+## Dataset & Preprocessing
+To enhance model performance, we perform **data augmentation** and **preprocessing** to standardize images before training. Below is an example of the preprocessing step:
 
-Results & Performance
-The model achieved:
+![Data Preprocessing](Data%20Preprocessing.png)
 
-92% Accuracy on the Validation Set
-80% Accuracy on the Test Set
-Performance visualizations:
+## Model Architecture
+- **Base Model:** VGG-16 (pretrained on ImageNet)
+- **Layers Fine-Tuned:** Fully connected layers adapted for binary classification
+- **Optimizer:** Adam
+- **Loss Function:** Binary Cross-Entropy
 
-<p align="center"> <img width="850" height="300" src="Images/Accuracy%20&%20Loss%20Curves.png" alt="Accuracy & Loss Curves"> </p> <p align="center"> <img width="400" height="400" src="Images/Confusion%20Matrix-Validation.png" alt="Confusion Matrix - Validation"> </p> <p align="center"> <img width="400" height="400" src="Images/Confusion%20Matrix-Test.png" alt="Confusion Matrix - Test"> </p>
-Example MRI Scans
-<p align="center"> <img width="350" height="300" src="Images/No%20Tumor.png" alt="No Tumor"> <img width="350" height="300" src="Images/Tumor.png" alt="Tumor"> </p>
-Conclusion & Future Improvements
-The CNN-based model effectively classifies brain tumors from MRI scans. Future improvements include:
-✔️ Expanding the dataset for better generalization
-✔️ Experimenting with alternative CNN architectures (ResNet, EfficientNet)
-✔️ Hyperparameter tuning for improved performance
+## Training & Results
+The model is trained to classify MRI scans into **tumor** and **non-tumor** classes. Below are some sample images from the dataset:
 
+### No Tumor
+![No Tumor](No%20Tumor.png)
+
+### Tumor Detected
+![Tumor](Tumor.png)
+
+### Model Performance
+Below are the **training accuracy and loss curves**, indicating the model’s learning progress:
+
+![Accuracy & Loss Curves](Accuracy%20&%20Loss%20Curves.png)
+
+### Confusion Matrices
+The confusion matrices for the **validation** and **test** datasets are shown below:
+
+#### Validation Set Performance:
+![Confusion Matrix - Validation](Confusion%20Matrix-%20Validation.png)
+
+#### Test Set Performance:
+![Confusion Matrix - Test](Confusion%20Matrix-%20Test.png)
+
+## Conclusion
+The VGG-16 model effectively classifies brain tumor images. Future improvements could include:
+- Training on a **larger dataset** for better generalization
+- Implementing **hyperparameter tuning** for improved accuracy
+- Exploring **alternative CNN architectures** like ResNet or EfficientNet
+
+---
+
+📌 **License:** This project is open-source under the MIT License.
